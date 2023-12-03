@@ -10,7 +10,7 @@ import (
 func main() {
 	// Making an async goroutine call to the getPokemon function
 	go getPokemon()
-	// or to making anonymous function calls
+	// or to make anonymous function calls
 	go func() {
 		result := getPokemon()
 		fmt.Println(result)

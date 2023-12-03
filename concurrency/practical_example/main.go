@@ -53,7 +53,7 @@ func fetchDataAsynchronously() *Pokemon {
 	go getPokemonNameA(respch, wg)
 	wg.Add(3)     // because three go routines
 	wg.Wait()     // wait till all the go routines finish
-	close(respch) // close the response channel or less the below range loop will execute indefinitely
+	close(respch) // close the response channel or else the below range loop will execute indefinitely
 	for res := range respch {
 		switch res.identity {
 		case "name":
